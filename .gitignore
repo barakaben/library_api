@@ -1,0 +1,21 @@
+#./.gitignore in root of repository#keep rule
+!gitkeep.txt
+#django#
+db.sqlite3
+*.log
+*.pyc
+__pycache__
+#media#
+media/
+#environment#
+.env
+virtual_env/
+#library_api#visualstudio code#
+*.suo
+*.pyproj
+*.pyproj.user
+*.history
+.vs/
+obj/
+#heroku#
+staticfiles

@@ -1,0 +1,6 @@
+DEBUG=True
+DATABASE_URL=sqlite://library_api.sqlite3
+SECRET_KEY=django-insecure-0^uv%inujkaizcbv*)2rvg8-f4ls7ay7_b5%@)r1^f3$$=l!k&
+DATABASE_NAME=
+DATABASE_USER=
+DATABASE_PASS=

@@ -1,0 +1,3 @@
+#LIBRARY Backend API
+##Introduction
+This is built up purposely as an API that exposes the electronic Learning resources and facilities such as eLibrary that initially serves ebooks held in it but will soon be holding video courses etc; Other Learning stuffs will soon be served on the platform for Library's stakeholders and shareholders which includes learners, tutors, patner businesses, governments agencies, and the diverse learning community from various location around the globe with internet access.
