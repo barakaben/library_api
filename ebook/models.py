@@ -1,6 +1,6 @@
 from django.db import models
-from django.conf import settings
-User=settings.AUTH_USER_MODEL
+from django.contrib.auth import get_user_model
+User=get_user_model()
 import datetime 
 # Create your models here.
 class Category(models.Model):
@@ -25,7 +25,6 @@ class Ebook(models.Model):
     def __str__(self):
         return self.title
 
-
 class Review(models.Model):
     class Rating(models.IntegerChoices):
         Bad=1
@@ -38,3 +37,5 @@ class Review(models.Model):
     note=models.TextField()
     rating=models.IntegerField(choices=Rating.choices)
     
+    def __str__(self):
+        return self.note
