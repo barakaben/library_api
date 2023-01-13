@@ -9,6 +9,7 @@ django-environ = "*"
 pillow = "*"
 djangorestframework = "*"
 djangorestframework-simplejwt = "*"
+dj-rest-auth = "*"
 
 [dev-packages]
 

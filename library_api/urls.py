@@ -26,5 +26,5 @@ urlpatterns = [
     path('api/v1/',include('ebook.urls')),#new
     path('api/token/',TokenObtainPairView.as_view(),name='token_obtain_pair'),#new
     path('api/token/refresh/',TokenRefreshView.as_view(),name='token_refresh'),#new
-
+    path('api/v1/dj-rest-auth/', include('dj_rest_auth.urls')),#new
 ]

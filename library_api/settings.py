@@ -43,7 +43,9 @@ INSTALLED_APPS = [
     'user.apps.UserConfig',#new
     'ebook.apps.EbookConfig',#new
     'rest_framework',#new
+    'rest_framework.authtoken',#new
     'rest_framework_simplejwt',#new
+    'dj_rest_auth',#new
 ]
 
 REST_FRAMEWORK={
