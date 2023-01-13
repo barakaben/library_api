@@ -43,12 +43,16 @@ INSTALLED_APPS = [
     'user.apps.UserConfig',#new
     'ebook.apps.EbookConfig',#new
     'rest_framework',#new
+    'rest_framework_simplejwt',#new
 ]
 
 REST_FRAMEWORK={
     'DEFAULT_PERMISSION_CLASSES':[
         'rest_framework.permissions.AllowAny',
 
+    ],
+    'DEFAULT_AUTHENTICATION_CLASSES':[
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
     ]
 }
 
