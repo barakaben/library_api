@@ -46,7 +46,15 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',#new
     'rest_framework_simplejwt',#new
     'dj_rest_auth',#new
+    'allauth',#new
+    'allauth.account',#new
+    'allauth.socialaccount',#new
+    'dj_rest_auth.registration',#new
 ]
+
+EMAIL_BACKEND='django.core.mail.backends.console.EmailBackend'#new
+
+SITE_ID=1#new
 
 REST_FRAMEWORK={
     'DEFAULT_PERMISSION_CLASSES':[
