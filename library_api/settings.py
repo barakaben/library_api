@@ -50,7 +50,11 @@ INSTALLED_APPS = [
     'allauth.account',#new
     'allauth.socialaccount',#new
     'dj_rest_auth.registration',#new
+    'corsheaders',#new
 ]
+
+CORS_ALLOWED_ORIGIN=env.list(
+'CORS_ALLOWED_ORIGINS')
 
 EMAIL_BACKEND='django.core.mail.backends.console.EmailBackend'#new
 
@@ -59,16 +63,24 @@ SITE_ID=1#new
 REST_FRAMEWORK={
     'DEFAULT_PERMISSION_CLASSES':[
         'rest_framework.permissions.AllowAny',
-
     ],
+
     'DEFAULT_AUTHENTICATION_CLASSES':[
         'rest_framework_simplejwt.authentication.JWTAuthentication',
-    ]
+    ],
+
+    'DEFAULT_RENDER_CLASSES':[
+        'rest_framework.renders.JSONRenderer',
+    ],
+
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE': 10
 }
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',#new
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
