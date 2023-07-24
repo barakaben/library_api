@@ -16,8 +16,8 @@ class Ebook(models.Model):
     title=models.CharField(max_length=150)
     authors=models.CharField(max_length=150)
     publisher=models.CharField(max_length=150)
-    cover_image=models.ImageField()
-    pdf=models.FileField()
+    cover_image=models.ImageField(upload_to="covers/%Y/%m/%d/")
+    pdf=models.FileField(upload_to="pdfs/%Y/%m/%d/")
     category=models.ForeignKey(Category, on_delete=models.PROTECT, default=None)
     year = models.IntegerField(('year'),choices=YEAR_CHOICES,default=\
     datetime.datetime.now().year)

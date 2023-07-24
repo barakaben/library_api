@@ -11,7 +11,7 @@ class UserSerializer(serializers.ModelSerializer):
 
 class EbookSerializer(serializers.ModelSerializer):
     class Meta:
-        fields=('title','authors','cover_image','pdf','publisher','year')
+        fields=('id','title','authors','cover_image','pdf','publisher','year')
         model=Ebook
 
 class CategorySerializer(serializers.ModelSerializer):

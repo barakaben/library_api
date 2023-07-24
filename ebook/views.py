@@ -13,7 +13,7 @@ class CategoryViewSet(viewsets.ModelViewSet):
     serializer_class=CategorySerializer
 
 class EbookViewSet(viewsets.ModelViewSet):
-    permission_classes=(IsAdminOrReadOnly,)
+    #permission_classes=(IsAdminOrReadOnly,)
     queryset=Ebook.objects.all()
     serializer_class=EbookSerializer    
 

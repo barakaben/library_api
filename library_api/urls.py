@@ -14,6 +14,8 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+from django.conf import settings
+from django.conf.urls.static import static
 from django.urls import path
 from django.urls import include #new
 from rest_framework_simplejwt.views import (
@@ -29,3 +31,7 @@ urlpatterns = [
     path('api/v1/dj-rest-auth/', include('dj_rest_auth.urls')),#new
     path('api/v1/dj-rest-auth/registration', include('dj_rest_auth.registration.urls')),#new
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
